@@ -70,18 +70,6 @@ export default function InfiniteText() {
                         muted
                         className="w-full h-auto rounded-xl"
                     />
-                    <div className="py-4">
-                        <h1 className="text-xl">Explanation</h1>
-                        <li>
-                            motionProperties: We created an object called motionProperties that holds the common properties for motion.div
-                        </li>
-                        <li>
-                            Mapping over Array: We use [0, 1].map() to render two motion.div components, passing motionProperties using the spread operator ...motionProperties.
-                        </li>
-                        <li>
-                            key Prop: The key prop is necessary when rendering elements in a loop, so index is used to ensure unique keys.
-                        </li>
-                    </div>
                 </div>
 
                 <div className="flex flex-col gap-4">

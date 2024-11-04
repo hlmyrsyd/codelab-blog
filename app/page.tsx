@@ -1,8 +1,46 @@
 'use client'
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { TutorialCard } from "./components";
+import { tutorials } from "./infiniteText/lib/recentTutorial";
 
 export default function home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+        videoRef.current.currentTime = 1.2;
+
+        const handleSeeked = () => {
+            videoRef.current?.pause();
+        };
+
+        videoRef.current.addEventListener("seeked", handleSeeked);
+
+        return () => {
+            videoRef.current?.removeEventListener("seeked", handleSeeked);
+        };
+    }
+}, []);
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      if (videoRef.current.currentTime === videoRef.current.duration) {
+        videoRef.current.currentTime = 0;
+      }
+      videoRef.current.play();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+        videoRef.current.currentTime = 1.2; 
+        videoRef.current.pause(); 
+    }
+};
+
   return (
     <div>
       <div>
@@ -30,6 +68,22 @@ export default function home() {
 
         <section className="py-4">
           <h1 className="text-xl">Welcome to Codelab, This is my playground to try and explore witchcraft</h1>
+        </section>
+
+        <section className="py-32">
+          <div className="text-3xl">
+            <h1>Recent Tutorials</h1>
+            {tutorials.map((tutorial, index) => (
+              <TutorialCard
+                key={index}
+                videoSrc={tutorial.videoSrc}
+                title={tutorial.title}
+                date={tutorial.date}
+                link={tutorial.link}
+              />
+            ))}
+            <div></div>
+          </div>
         </section>
       </div>
     </div>
