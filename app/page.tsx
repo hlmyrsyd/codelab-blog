@@ -1,45 +1,10 @@
 'use client'
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
 import { TutorialCard } from "./components";
-import { tutorials } from "./infiniteText/lib/recentTutorial";
+import { tutorials } from "./lib/recentTutorial";
 
 export default function home() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-        videoRef.current.currentTime = 1.2;
-
-        const handleSeeked = () => {
-            videoRef.current?.pause();
-        };
-
-        videoRef.current.addEventListener("seeked", handleSeeked);
-
-        return () => {
-            videoRef.current?.removeEventListener("seeked", handleSeeked);
-        };
-    }
-}, []);
-
-  const handleMouseEnter = () => {
-    if (videoRef.current) {
-      if (videoRef.current.currentTime === videoRef.current.duration) {
-        videoRef.current.currentTime = 0;
-      }
-      videoRef.current.play();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-        videoRef.current.currentTime = 1.2; 
-        videoRef.current.pause(); 
-    }
-};
 
   return (
     <div>

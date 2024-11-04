@@ -3,7 +3,7 @@ export const tutorials = [
         videoSrc: "/videos/InfiniteText.mp4",
         title: "Infinite Text",
         date: "November 3, 2024",
-        link: "/infiniteText",
+        link: "/tutorial/infiniteText",
     },
     // {
     //     videoSrc: "/videos/OtherTutorial.mp4",

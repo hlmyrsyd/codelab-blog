@@ -69,7 +69,7 @@ export function TutorialCard({
                 </motion.div>
             </Link>
             <h1 className="text-xl font-semibold mt-2">{title}</h1>
-            <p className="text-sm text-gray-500">{date}</p>
+            <p className="text-sm text-neutral-500">{date}</p>
         </div>
     );
 }

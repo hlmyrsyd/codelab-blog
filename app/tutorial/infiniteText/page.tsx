@@ -1,7 +1,6 @@
 'use client'
 
-
-import { CodeBox } from "../components";
+import { CodeBox } from "@/app/components";
 import { CreateProject, FinalCode, InstallFramer } from "./lib/codeBoxLib";
 
 export default function InfiniteText() {           
