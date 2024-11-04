@@ -31,12 +31,6 @@ export default function Sidebar() {
                 >
                     <h1>Tutorial</h1>
                 </Link>
-                <Link
-                    className="w-full rounded-md border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-between hover:bg-[#f2f2f2] dark:hover:bg-[#2a2a2a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 mb-4"
-                    href="/tutorial/infiniteText"
-                >
-                    <h1>Infinite Text</h1>
-                </Link>
             </div>
         </TransitionWrapper>
     );

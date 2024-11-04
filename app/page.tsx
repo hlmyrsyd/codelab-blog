@@ -45,6 +45,7 @@ export default function home() {
                 title={tutorial.title}
                 date={tutorial.date}
                 link={tutorial.link}
+                tags={tutorial.tags}
               />
             ))}
             <div></div>

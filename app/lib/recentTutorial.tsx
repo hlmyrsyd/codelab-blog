@@ -4,6 +4,7 @@ export const tutorials = [
         title: "Infinite Text",
         date: "November 3, 2024",
         link: "/tutorial/infiniteText",
+        tags: ["framer"],
     },
     // {
     //     videoSrc: "/videos/OtherTutorial.mp4",
