@@ -86,7 +86,7 @@ export default function InfiniteText() {
 
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl pb-3">Done!</h1>
-                    <p>That's it for the simple easy reusable Infinite text</p>
+                    <p>That&apos;s it for the simple easy reusable Infinite text</p>
                     <p>you can also improve it whatever you like or make it following the scroll behavior.</p>
                     <p>- H</p>
                 </div>
