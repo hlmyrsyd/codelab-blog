@@ -167,7 +167,7 @@ export default function PageOne() {
                             className="rounded-md p-2 border border-black flex items-center justify-between bg-[#ddd] hover:bg-[#aaa]"
                             onClick={() => handleTransition('/pageOne')}
                         >
-                            Go to Back
+                            Go Back
                         </button>
                     </ TransitionWrapper>
                 </div>
