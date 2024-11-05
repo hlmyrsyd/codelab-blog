@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { TransitionWrapper } from "../components";
 
-export default function codeground() {
+export default function Codeground() {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const router = useRouter();
 

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function pageTwo() {
+export default function PageTwo() {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const router = useRouter();
 
