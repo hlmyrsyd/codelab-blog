@@ -6,12 +6,13 @@ export const tutorials = [
         link: "/tutorial/infiniteText",
         tags: ["framer"],
     },
-    // {
-    //     videoSrc: "/videos/OtherTutorial.mp4",
-    //     title: "Another Tutorial",
-    //     date: "October 25, 2024",
-    //     link: "/anotherTutorial",
-    // },
+    {
+        videoSrc: "/videos/pageTransition.mp4",
+        title: "Page Transition",
+        date: "November 4, 2024",
+        link: "/tutorial/pageTransition",
+        tags: ["framer"]
+    },
     // {
     //     videoSrc: "/videos/MoreContent.mp4",
     //     title: "More Content",

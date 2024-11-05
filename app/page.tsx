@@ -38,17 +38,18 @@ export default function home() {
         <section className="py-32">
           <div className="text-3xl">
             <h1>Recent Tutorials</h1>
-            {tutorials.map((tutorial, index) => (
-              <TutorialCard
-                key={index}
-                videoSrc={tutorial.videoSrc}
-                title={tutorial.title}
-                date={tutorial.date}
-                link={tutorial.link}
-                tags={tutorial.tags}
-              />
-            ))}
-            <div></div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+              {tutorials.map((tutorial, index) => (
+                <TutorialCard
+                  key={index}
+                  videoSrc={tutorial.videoSrc}
+                  title={tutorial.title}
+                  date={tutorial.date}
+                  link={tutorial.link}
+                  tags={tutorial.tags}
+                />
+              ))}
+            </div>
           </div>
         </section>
       </div>
