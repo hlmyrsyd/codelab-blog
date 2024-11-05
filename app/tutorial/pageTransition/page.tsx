@@ -1,7 +1,7 @@
 'use client'
 
 import { CodeBox } from "@/app/components";
-import { CreateProject, FinalCode, InstallFramer } from "./lib/codeBoxLib";
+import { CreateProject, FinalCode, InstallFramer, SetupCode } from "./lib/codeBoxLib";
 
 export default function InfiniteText() {           
     
@@ -57,13 +57,38 @@ export default function InfiniteText() {
                     <h1 className="text-2xl pb-3">Setting Up the Project</h1>
                     <div className="flex flex-col gap-2 w-full">
                         <p>
-                            Create new file for the InfiniteText and import it in the page.tsx so it can be used everytime, Adjust the width and duration to control its movement
+                            Create new file for the <span className="p-1 bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-600 rounded-md">OpeningContainer</span>, import it in the <span className="p-1 bg-neutral-600 rounded-md">page.tsx</span> so it can be used everytime.
+                        </p>
+                        <CodeBox files={SetupCode} />
+                    </div>
+                    <h2 className="text-xl py-5">We should have something like this</h2>
+                    <video 
+                        src="/videos/pageTransition1.mp4" 
+                        autoPlay
+                        loop 
+                        muted
+                        className="w-full h-auto rounded-xl"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-4">
+                    <h1 className="text-2xl pb-3">Great Start!</h1>
+                    <p>As you can see in the Home Page, the opening and transition to the next page is working great.</p>
+                    <p>but there is no transition when opening the <span className="p-1 bg-neutral-600 rounded-md">Page One</span>, its just pop up out of nowhere.</p>
+                    <p>don&apos;t worry, next we going to apply the same transition so every page has the same transition</p>
+                </div>
+
+                <div>
+                    <h1 className="text-2xl pb-3">Add Transition to other Page</h1>
+                    <div className="flex flex-col gap-2 w-full">
+                        <p>
+                            Import <span className="p-1 bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-600 rounded-md">OpeningContainer</span> to the <span className="p-1 bg-neutral-600 rounded-md">pageOne.tsx</span> so it can be used everytime.
                         </p>
                         <CodeBox files={FinalCode} />
                     </div>
                     <h2 className="text-xl py-5">We should have something like this</h2>
                     <video 
-                        src="/videos/FinalInfiniteText.mp4" 
+                        src="/videos/pageTransition2.mp4" 
                         autoPlay
                         loop 
                         muted
@@ -73,8 +98,8 @@ export default function InfiniteText() {
 
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl pb-3">Done!</h1>
-                    <p>That&apos;s it for the simple easy reusable Infinite text</p>
-                    <p>you can also improve it whatever you like or make it following the scroll behavior.</p>
+                    <p>That&apos;s it for the simple easy reusable Page Transition</p>
+                    <p>you can also improve it whatever you like or make transition from other direction.</p>
                     <p>- H</p>
                 </div>
             </section>

@@ -9,7 +9,7 @@ export const tutorials = [
     {
         videoSrc: "/videos/pageTransition.mp4",
         title: "Page Transition",
-        date: "November 4, 2024",
+        date: "November 5, 2024",
         link: "/tutorial/pageTransition",
         tags: ["framer"]
     },

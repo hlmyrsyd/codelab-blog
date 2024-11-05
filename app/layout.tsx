@@ -26,11 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="gap-10 w-full h-screen flex flex-row xl:px-[24rem] px-10">
-          <div className="h-full w-56 overflow-auto">
-            <Sidebar />
+        <div className="gap-10 w-full h-screen flex flex-row xl:px-[20rem] px-10">
+          <div className="h-full w-56 flex items-start overflow-auto">
+            <div className="pt-16">
+              <Sidebar />
+            </div>
           </div>
-          <main className="flex-1 h-full overflow-auto p-2">
+          <main className="flex-1 h-full overflow-auto p-2 py-10">
             {children}
           </main>
         </div>

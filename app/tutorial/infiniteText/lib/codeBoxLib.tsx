@@ -2,7 +2,7 @@ export const CreateProject = [
     {
         name: 'bash',
         language: 'bash',
-        code: `npx create next app@latest`,
+        code: `npx create-next-app@latest`,
     }
 ];
 
@@ -21,15 +21,16 @@ export const FinalCode = [
         code: 
 `'use client'
 
-// This is where the the text are 
 import InfiniteText from "./components/InfiniteText";
+
+// This is where the the text are 
 const Text = () => (
     <div className="flex w-full justify-around">
         <p>This</p>
         <p>text</p>
         <p>keeps</p>
         <p>moving</p>
-    </div>
+    </div>  
 );
 
 export default function Home() {

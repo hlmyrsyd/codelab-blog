@@ -24,7 +24,7 @@ export const TransitionWrapper = ({ children, isTransitioning }: { children: Rea
                     className="fixed top-0 left-0 w-screen h-screen bg-white dark:bg-neutral-900 z-50"
                 />
             )}
-            <div>
+            <div className="flex w-full h-full justify-center items-center">
                 {children}
             </div>
         </>

@@ -18,12 +18,12 @@ export default function Sidebar() {
 
     return (
         <TransitionWrapper isTransitioning={isTransitioning}>
-            <div className="py-16">
+            <div>
                 <button
                     className="w-full rounded-md border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-between hover:bg-[#f2f2f2] dark:hover:bg-[#2a2a2a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 mb-4"
                     onClick={() => handleTransition('https://www.hilmyrasyad.site/')}
                 >
-                    <h1>Let&apos;s get back</h1>
+                    <h1>About Me</h1>
                 </button>
                 <Link
                     className="w-full rounded-md border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-between hover:bg-[#f2f2f2] dark:hover:bg-[#2a2a2a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44 mb-4"
