@@ -8,7 +8,7 @@ export const WavyText = ({ text }: { text: string }) => {
 
     const letterVariants = {
         initial: { y: 0 },
-        hover: { y: -22, transition: { ease: "easeInOut", duration: 0.5 } },
+        hover: { y: -26, transition: { ease: "easeInOut", duration: 0.5 } },
         exit: { y: 0, transition: { ease: "easeInOut", duration: 0.5 } },
     };
 
