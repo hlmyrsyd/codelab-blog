@@ -1,7 +1,7 @@
 'use client'
 
 import Magnetic from "./magnetic";
-import StickyCursor from "./stickyCursor";
+// import StickyCursor from "./stickyCursor";
 
 export default function Home() {
 

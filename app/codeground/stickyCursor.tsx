@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
+import { motion, useSpring, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 
 export default function StickyCursor() {

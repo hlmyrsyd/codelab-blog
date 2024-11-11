@@ -11,7 +11,7 @@ export default function Magnetic() {
     const springY = useSpring(originY, smoothOptions);
     const distanceLimit = 200;
 
-    const handleMouseMove = (e:any) => {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
