@@ -1,5 +1,6 @@
 'use client'
 
+import Magnetic from "./magnetic";
 import StickyCursor from "./stickyCursor";
 
 export default function Home() {
@@ -11,11 +12,9 @@ export default function Home() {
                 backgroundColor: "var(--background)"
             }}
         >
-            <StickyCursor />
+            {/* <StickyCursor /> */}
             <div className="flex w-full h-full justify-center items-center">
-                <div className="w-36 h-36 bg-neutral-300">
-                    Test Image
-                </div>
+                <Magnetic />
             </div>
         </div>
     );
