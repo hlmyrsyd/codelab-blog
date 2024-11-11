@@ -1,30 +1,30 @@
 'use client'
 
-import { CodeBox } from "@/app/components";
-import { CreateProject, FinalCode, InstallFramer, SetupCode } from "./lib/codeBoxLib";
+// import { CodeBox } from "@/app/components";
+// import { CreateProject, FinalCode, InstallFramer, SetupCode } from "./lib/codeBoxLib";
 
-export default function PageTransition() {           
+export default function StickyImage() {           
     
     return (
         <div className="flex flex-col">
             <div className="border-b border-solid border-black/[.08] dark:border-white/[.145]">
                 <h1 className="text-[5rem] font-bold">
-                    Page Transition
+                    Sticky Image
                 </h1>
             </div>
 
             <section className="py-4 gap-4">
                 <h1 className="text-xl">
-                    Build a transition from each page with Next.js and Framer Motion
+                    Build a sticky image with Next.js and Framer Motion
                 </h1>
                 <p>
-                    A website tutorial to make a simple transition from one page to other. 
+                    A website tutorial to make a sticky magnetic image to the cursor. 
                 </p>
             </section>
 
             <section className="flex flex-col py-4 gap-4">
                 <video 
-                    src="/videos/pageTransition.mp4" 
+                    src="/videos/stickyImage.mp4" 
                     autoPlay
                     loop 
                     muted
@@ -32,7 +32,15 @@ export default function PageTransition() {
                 />
             </section>
 
-            <section className="flex flex-col gap-10">
+            <section>
+                <div>
+                    <h1>
+                        This tutorial still on going, please wait 
+                    </h1>
+                </div>
+            </section>
+
+            {/* <section className="flex flex-col gap-10">
                 <div>
                     <h1 className="text-2xl pb-3">Create the Project</h1>
                     <div className="flex flex-col gap-2 w-full">
@@ -102,7 +110,7 @@ export default function PageTransition() {
                     <p>you can also improve it whatever you like or make transition from other direction.</p>
                     <p>- H</p>
                 </div>
-            </section>
+            </section> */}
         </div> 
     );
 };

@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Magnetic() {
     const originX = useMotionValue(0);
     const originY = useMotionValue(0);
-    const smoothOptions = { stiffness: 250, damping: 10, mass: 1 };
+    const smoothOptions = { stiffness: 200, damping: 10, mass: 0.5 };
     const springX = useSpring(originX, smoothOptions);
     const springY = useSpring(originY, smoothOptions);
     const distanceLimit = 200;

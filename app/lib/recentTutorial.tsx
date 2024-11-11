@@ -13,10 +13,11 @@ export const tutorials = [
         link: "/tutorial/pageTransition",
         tags: ["framer"]
     },
-    // {
-    //     videoSrc: "/videos/MoreContent.mp4",
-    //     title: "More Content",
-    //     date: "September 18, 2024",
-    //     link: "/moreContent",
-    // },
+    {
+        videoSrc: "/videos/stickyImage.mp4",
+        title: "Sticky Image",
+        date: "November 11, 2024",
+        link: "/tutorial/stickyImage",
+        tags: ["framer"]
+    },
 ];
