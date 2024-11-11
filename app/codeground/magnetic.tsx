@@ -1,16 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import Image from "next/image";
 
 export default function Magnetic() {
-    const [isNearCursor, setIsNearCursor] = useState(false);
     const originX = useMotionValue(0);
     const originY = useMotionValue(0);
-    const smoothOptions = { stiffness: 300, damping: 20, mass: 1.5}
+    const smoothOptions = { stiffness: 300, damping: 20, mass: 1.5 };
     const springX = useSpring(originX, smoothOptions);
     const springY = useSpring(originY, smoothOptions);
-    const distanceLimit = 500; // Increased distance for magnetic effect
+    const distanceLimit = 300;
 
     const handleMouseMove = (e:any) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -21,27 +20,23 @@ export default function Magnetic() {
         const distance = Math.sqrt(distX * distX + distY * distY);
 
         if (distance < distanceLimit) {
-            setIsNearCursor(true);
             const pullStrength = 1 - distance / distanceLimit;
-            originX.set(distX * pullStrength * 1); // Increased magnetic strength
-            originY.set(distY * pullStrength * 1);
+            originX.set(distX * pullStrength);
+            originY.set(distY * pullStrength);
         } else {
-            setIsNearCursor(false);
-            originX.set(0); // Reset to original position
+            originX.set(0);
             originY.set(0);
         }
     };
 
     const handleMouseLeave = () => {
-        // Reset position when cursor leaves
-        setIsNearCursor(false);
         originX.set(0);
         originY.set(0);
     };
 
     return (
         <motion.div
-            className="w-64 h-64 bg-neutral-600 flex justify-center items-center"
+            className="w-72 h-72 flex justify-center items-center cursor-pointer"
             style={{
                 x: springX,
                 y: springY,
@@ -49,7 +44,15 @@ export default function Magnetic() {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            Magnetic Div
+            <div className="flex w-full h-full">
+                <Image 
+                    src="/images/contoh-img.png" 
+                    alt="contoh gambar"
+                    height={600}
+                    width={600}
+                    className="object-cover w-full h-full rounded-2xl"                
+                />
+            </div>
         </motion.div>
     );
 };
