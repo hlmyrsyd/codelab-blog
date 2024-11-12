@@ -103,7 +103,11 @@ export default function StickyImage() {
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl pb-3">Make Sticky</h1>
                     <div className="flex flex-col gap-2 w-full">
-                        <p>Add motion in the div to scale up whole div when the cursor is hovering the image.</p>
+                        <p>Add a function to handle cursor when hover using <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">useMotionValue</span> and <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">useSpring</span> from framer for smooth motion. 
+                        </p>
+                        <p>
+                        Adjust the motion smoothness in <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">smoothOptions</span> and adjust the distance in the <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">distanceLimit</span>.
+                        </p>
                         <CodeBox files={FinalCode} />
                     </div>
                     <h2 className="text-xl py-5">We should have something like this</h2>
