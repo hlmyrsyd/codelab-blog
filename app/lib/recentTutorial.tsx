@@ -4,20 +4,20 @@ export const tutorials = [
         title: "Infinite Text",
         date: "November 3, 2024",
         link: "/tutorial/infiniteText",
-        tags: ["framer"],
+        tags: ["framer", "animation"],
     },
     {
         videoSrc: "/videos/pageTransition.mp4",
         title: "Page Transition",
         date: "November 5, 2024",
         link: "/tutorial/pageTransition",
-        tags: ["framer"]
+        tags: ["framer","transition"]
     },
     {
         videoSrc: "/videos/stickyImage.mp4",
         title: "Sticky Image",
         date: "November 11, 2024",
         link: "/tutorial/stickyImage",
-        tags: ["framer"]
+        tags: ["framer","mouse"]
     },
 ];
