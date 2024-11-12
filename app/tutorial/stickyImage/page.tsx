@@ -2,6 +2,7 @@
 
 import { CodeBox } from "@/app/components";
 import { CreateProject, FinalCode, InstallFramer, SetupCode } from "./lib/codeBoxLib";
+import Image from "next/image";
 
 export default function StickyImage() {           
     
@@ -62,12 +63,12 @@ export default function StickyImage() {
                         <CodeBox files={SetupCode} />
                     </div>
                     <h2 className="text-xl py-5">We should have something like this</h2>
-                    <video 
-                        src="/videos/pageTransition1.mp4" 
-                        autoPlay
-                        loop 
-                        muted
-                        className="w-full h-auto rounded-xl"
+                    <Image 
+                        src="/images/stickyImage1.png" 
+                        alt="sticky image example"
+                        height={990}
+                        width={1920}                        
+                        className="object-cover w-full h-full rounded-xl"
                     />
                 </div>
 

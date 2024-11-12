@@ -53,9 +53,7 @@ export default function StickyImage() {
             </div>
         </div>
     )
-}
-
-`
+}`
     }
 ]
 
