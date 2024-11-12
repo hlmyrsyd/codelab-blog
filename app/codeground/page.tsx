@@ -9,7 +9,7 @@ export default function Home() {
         <div 
             className="fixed w-screen h-screen top-0 left-0"
             style={{
-                backgroundColor: "var(--background)"
+                backgroundColor: "white"
             }}
         >
             {/* <div className="flex w-full text-center p-10 flex-col">
