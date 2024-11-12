@@ -75,7 +75,7 @@ export default function StickyImage() {
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl pb-3">Great Start!</h1>
                     <p>Now, we have an image in the center and we want to make sure that it is enlarged when the cursor hovers over the image.</p>
-                    <p>we will update <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">stickyImage.tsx</span> using framer to create smooth motion when hovering over the image.</p>
+                    <p>We will update <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">stickyImage.tsx</span> using framer to create smooth motion when hovering over the image.</p>
                 </div>
 
                 <div className="flex flex-col gap-4">
@@ -85,12 +85,34 @@ export default function StickyImage() {
                         <CodeBox files={ScaleupImage} />
                     </div>
                     <h2 className="text-xl py-5">We should have something like this</h2>
-                    <Image 
-                        src="/images/stickyImage1.png" 
-                        alt="sticky image example"
-                        height={990}
-                        width={1920}                        
-                        className="object-cover w-full h-full rounded-xl"
+                    <video 
+                        src="/videos/stickyImage1.mp4" 
+                        autoPlay
+                        loop 
+                        muted
+                        className="w-full h-auto rounded-xl"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-4">
+                    <h1 className="text-2xl pb-3">Awesome!</h1>
+                    <p>There is now a smooth motion of the image becoming larger when hovering over the image.</p>
+                    <p>We will update <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">stickyImage.tsx</span> again to be sticky to the cursor on hover.</p>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                    <h1 className="text-2xl pb-3">Make Sticky</h1>
+                    <div className="flex flex-col gap-2 w-full">
+                        <p>Add motion in the div to scale up whole div when the cursor is hovering the image.</p>
+                        <CodeBox files={FinalCode} />
+                    </div>
+                    <h2 className="text-xl py-5">We should have something like this</h2>
+                    <video 
+                        src="/videos/stickyImage1.mp4" 
+                        autoPlay
+                        loop 
+                        muted
+                        className="w-full h-auto rounded-xl"
                     />
                 </div>
 

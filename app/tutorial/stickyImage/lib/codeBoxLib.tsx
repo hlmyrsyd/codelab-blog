@@ -91,45 +91,66 @@ export default function StickyImage() {
 
 export const FinalCode = [
     {
-        name: 'pageOne.tsx',
+        name: 'stickyImage.tsx',
         language: 'typescript',
-        code: 
-`'use client'
+        code:
+`import Image from "next/image";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { TransitionWrapper } from "../TransitionWrapper";
-import { OpeningContainer } from "../openingContainer";
+export default function StickyImage() {
+    const originX = useMotionValue(0);
+    const originY = useMotionValue(0);
+    const smoothOptions = { stiffness: 200, damping: 10, mass: 0.5 };
+    const springX = useSpring(originX, smoothOptions);
+    const springY = useSpring(originY, smoothOptions);
+    const distanceLimit = 200;
 
-export default function PageOne() {
-    const [isTransitioning, setIsTransitioning] = useState(false);
-    const router = useRouter();
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const distX = e.clientX - centerX;
+        const distY = e.clientY - centerY;
+        const distance = Math.sqrt(distX * distX + distY * distY);
 
-    const handleTransition = (route: string) => {
-        setIsTransitioning(true);
-        setTimeout(() => {
-        router.push(route);
-        }, 1300); // Control the transition timing
+        if (distance < distanceLimit) {
+            const pullStrength = 1.3 - distance / distanceLimit;
+            originX.set(distX * pullStrength);
+            originY.set(distY * pullStrength);
+        } else {
+            originX.set(0);
+            originY.set(0);
+        }
     };
 
+    const handleMouseLeave = () => {
+        originX.set(0);
+        originY.set(0);
+    };
+    
     return (
-        <>
-            <div className="flex w-full h-full justify-space items-space">
-                <OpeningContainer title="Home" />
-
-                <div className="flex w-full h-full justify-center itmes-center">
-                    <TransitionWrapper isTransitioning={isTransitioning}>
-                        <button 
-                            className="rounded-md p-2 border border-black flex items-center justify-between bg-[#ddd] hover:bg-[#aaa]"
-                            onClick={() => handleTransition('/pageOne')}
-                        >
-                            Go Back
-                        </button>
-                    </ TransitionWrapper>
-                </div>
-            </div>
-        </>
-    );
+        <motion.div 
+            className="w-72 h-72 flex justify-center items-center cursor-pointer
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.2 }}
+            style={{
+                x: springX,
+                y: springY,
+            }}
+            onMouseMove={handleMouseMove} // function when hover
+            onMouseLeave={handleMouseLeave} // function when not hover
+        >
+            <div className="flex w-full h-full>
+                <Image
+                    src="/images/example.png"
+                    alt="example"
+                    height={600}
+                    width={600}
+                    className="object-cover w-full h-full"
+                />
+            </motion.div>
+        </div>
+    )
 }`
     }
 ]
