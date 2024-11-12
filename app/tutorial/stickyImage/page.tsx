@@ -108,7 +108,7 @@ export default function StickyImage() {
                     </div>
                     <h2 className="text-xl py-5">We should have something like this</h2>
                     <video 
-                        src="/videos/stickyImage1.mp4" 
+                        src="/videos/stickyImage2.mp4" 
                         autoPlay
                         loop 
                         muted

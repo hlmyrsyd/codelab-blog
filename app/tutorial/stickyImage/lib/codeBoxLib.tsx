@@ -100,7 +100,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 export default function StickyImage() {
     const originX = useMotionValue(0);
     const originY = useMotionValue(0);
-    const smoothOptions = { stiffness: 200, damping: 10, mass: 0.5 };
+    const smoothOptions = { stiffness: 200, damping: 10, mass: 0.5 }; // Adjust the Image motion
     const springX = useSpring(originX, smoothOptions);
     const springY = useSpring(originY, smoothOptions);
     const distanceLimit = 200;
