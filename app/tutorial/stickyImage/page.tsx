@@ -1,7 +1,7 @@
 'use client'
 
 import { CodeBox } from "@/app/components";
-import { CreateProject, FinalCode, InstallFramer, SetupCode } from "./lib/codeBoxLib";
+import { CreateProject, FinalCode, InstallFramer, ScaleupImage, SetupCode } from "./lib/codeBoxLib";
 import Image from "next/image";
 
 export default function StickyImage() {           
@@ -58,7 +58,7 @@ export default function StickyImage() {
                     <h1 className="text-2xl pb-3">Setting Up the Project</h1>
                     <div className="flex flex-col gap-2 w-full">
                         <p>
-                            Create new file for the <span className="p-1 bg-neutral-600 rounded-md">StickyImage</span>, import it in the <span className="p-1 bg-neutral-600 rounded-md">page.tsx</span> so it can be used everytime.
+                            Create new file for the <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">StickyImage</span>, import it in the <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">page.tsx</span> so it can be used everytime.
                         </p>
                         <CodeBox files={SetupCode} />
                     </div>
@@ -74,33 +74,30 @@ export default function StickyImage() {
 
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl pb-3">Great Start!</h1>
-                    <p>As you can see in the Home Page, the opening and transition to the next page is working great.</p>
-                    <p>but there is no transition when opening the <span className="p-1 bg-neutral-600 rounded-md">Page One</span>, its just pop up out of nowhere.</p>
-                    <p>don&apos;t worry, next we going to apply the same transition so every page has the same transition</p>
+                    <p>Now, we have an image in the center and we want to make sure that it is enlarged when the cursor hovers over the image.</p>
+                    <p>we will update <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">stickyImage.tsx</span> using framer to create smooth motion when hovering over the image.</p>
                 </div>
 
-                <div>
-                    <h1 className="text-2xl pb-3">Add Transition to other Page</h1>
+                <div className="flex flex-col gap-4">
+                    <h1 className="text-2xl pb-3">Add Scale Up</h1>
                     <div className="flex flex-col gap-2 w-full">
-                        <p>
-                            Import <span className="p-1 bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-600 rounded-md">OpeningContainer</span> to the <span className="p-1 bg-neutral-600 rounded-md">pageOne.tsx</span> so it can be used everytime.
-                        </p>
-                        <CodeBox files={FinalCode} />
+                        <p>Add motion in the div to scale up whole div when the cursor is hovering the image.</p>
+                        <CodeBox files={ScaleupImage} />
                     </div>
                     <h2 className="text-xl py-5">We should have something like this</h2>
-                    <video 
-                        src="/videos/pageTransition2.mp4" 
-                        autoPlay
-                        loop 
-                        muted
-                        className="w-full h-auto rounded-xl"
+                    <Image 
+                        src="/images/stickyImage1.png" 
+                        alt="sticky image example"
+                        height={990}
+                        width={1920}                        
+                        className="object-cover w-full h-full rounded-xl"
                     />
                 </div>
 
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl pb-3">Done!</h1>
-                    <p>That&apos;s it for the simple easy reusable Page Transition</p>
-                    <p>you can also improve it whatever you like or make transition from other direction.</p>
+                    <p>That&apos;s it for the sticky image</p>
+                    <p>you can also improve it whatever you like or make a sticky cursor too.</p>
                     <p>- H</p>
                 </div>
             </section>

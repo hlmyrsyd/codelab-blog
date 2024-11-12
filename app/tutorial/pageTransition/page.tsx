@@ -57,7 +57,7 @@ export default function PageTransition() {
                     <h1 className="text-2xl pb-3">Setting Up the Project</h1>
                     <div className="flex flex-col gap-2 w-full">
                         <p>
-                            Create new file for the <span className="p-1 bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-600 rounded-md">OpeningContainer</span>, import it in the <span className="p-1 bg-neutral-600 rounded-md">page.tsx</span> so it can be used everytime.
+                            Create new file for the <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">OpeningContainer</span>, import it in the <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">page.tsx</span> so it can be used everytime.
                         </p>
                         <CodeBox files={SetupCode} />
                     </div>
@@ -74,7 +74,7 @@ export default function PageTransition() {
                 <div className="flex flex-col gap-4">
                     <h1 className="text-2xl pb-3">Great Start!</h1>
                     <p>As you can see in the Home Page, the opening and transition to the next page is working great.</p>
-                    <p>but there is no transition when opening the <span className="p-1 bg-neutral-600 rounded-md">Page One</span>, its just pop up out of nowhere.</p>
+                    <p>but there is no transition when opening the <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">Page One</span>, its just pop up out of nowhere.</p>
                     <p>don&apos;t worry, next we going to apply the same transition so every page has the same transition</p>
                 </div>
 
@@ -82,7 +82,7 @@ export default function PageTransition() {
                     <h1 className="text-2xl pb-3">Add Transition to other Page</h1>
                     <div className="flex flex-col gap-2 w-full">
                         <p>
-                            Import <span className="p-1 bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-600 rounded-md">OpeningContainer</span> to the <span className="p-1 bg-neutral-600 rounded-md">pageOne.tsx</span> so it can be used everytime.
+                            Import <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">OpeningContainer</span> to the <span className="p-1 bg-neutral-400 dark:bg-neutral-600 rounded-md">pageOne.tsx</span> so it can be used everytime.
                         </p>
                         <CodeBox files={FinalCode} />
                     </div>

@@ -57,6 +57,38 @@ export default function StickyImage() {
     }
 ]
 
+export const ScaleupImage = [
+    {
+        name: 'stickyImage.tsx',
+        language: 'typescript',
+        code:
+`import Image from "next/image";
+import motion from "framer-motion";
+
+export default function StickyImage() {
+    return (
+        // Div for the image size and motion
+        <motion.div 
+            className="w-72 h-72 flex justify-center items-center cursor-pointer
+            initial={{ scale: 1 }} // Initial scale
+            whileHover={{ scale: 1.2 }} // Scale up 20% when cursor hover
+        >
+            // Div for the image
+            <div className="flex w-full h-full>
+                <Image
+                    src="/images/example.png"
+                    alt="example"
+                    height={600}
+                    width={600}
+                    className="object-cover w-full h-full"
+                />
+            </motion.div>
+        </div>
+    )
+}`
+    }
+]
+
 export const FinalCode = [
     {
         name: 'pageOne.tsx',
