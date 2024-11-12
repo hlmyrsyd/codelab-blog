@@ -12,11 +12,11 @@ export default function Home() {
                 backgroundColor: "var(--background)"
             }}
         >
-            <div className="flex w-full text-center p-10 flex-col">
+            {/* <div className="flex w-full text-center p-10 flex-col">
                 <code>
                     This is Codeground to test CodeLab Documentation
                 </code>
-            </div>
+            </div> */}
             {/* <StickyCursor /> */}
             <div className="flex w-full h-full justify-center items-center">
                 <Magnetic />
