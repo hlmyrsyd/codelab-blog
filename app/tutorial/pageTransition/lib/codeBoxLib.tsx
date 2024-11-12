@@ -39,7 +39,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="flex w-full h-full justify-space items-space">
+            <div className="flex w-full h-full justify-center itmes-center">
                 <OpeningContainer title="Home" />
 
                 <div className="flex w-full h-full justify-center itmes-center">
@@ -158,9 +158,8 @@ export default function PageOne() {
 
     return (
         <>
-            <div className="flex w-full h-full justify-space items-space">
+            <div className="flex w-full h-full justify-center itmes-center">
                 <OpeningContainer title="Home" />
-
                 <div className="flex w-full h-full justify-center itmes-center">
                     <TransitionWrapper isTransitioning={isTransitioning}>
                         <button 

@@ -1,7 +1,7 @@
 'use client'
 
-// import { CodeBox } from "@/app/components";
-// import { CreateProject, FinalCode, InstallFramer, SetupCode } from "./lib/codeBoxLib";
+import { CodeBox } from "@/app/components";
+import { CreateProject, FinalCode, InstallFramer, SetupCode } from "./lib/codeBoxLib";
 
 export default function StickyImage() {           
     
@@ -32,15 +32,7 @@ export default function StickyImage() {
                 />
             </section>
 
-            <section>
-                <div>
-                    <h1>
-                        This tutorial still on going, please wait 
-                    </h1>
-                </div>
-            </section>
-
-            {/* <section className="flex flex-col gap-10">
+            <section className="flex flex-col gap-10">
                 <div>
                     <h1 className="text-2xl pb-3">Create the Project</h1>
                     <div className="flex flex-col gap-2 w-full">
@@ -65,7 +57,7 @@ export default function StickyImage() {
                     <h1 className="text-2xl pb-3">Setting Up the Project</h1>
                     <div className="flex flex-col gap-2 w-full">
                         <p>
-                            Create new file for the <span className="p-1 bg-neutral-600 rounded-md">TransitionWrapper</span> and <span className="p-1 bg-neutral-600 rounded-md">OpeningContainer</span>, import it in the <span className="p-1 bg-neutral-600 rounded-md">page.tsx</span> so it can be used everytime.
+                            Create new file for the <span className="p-1 bg-neutral-600 rounded-md">StickyImage</span>, import it in the <span className="p-1 bg-neutral-600 rounded-md">page.tsx</span> so it can be used everytime.
                         </p>
                         <CodeBox files={SetupCode} />
                     </div>
@@ -110,7 +102,7 @@ export default function StickyImage() {
                     <p>you can also improve it whatever you like or make transition from other direction.</p>
                     <p>- H</p>
                 </div>
-            </section> */}
+            </section>
         </div> 
     );
 };
